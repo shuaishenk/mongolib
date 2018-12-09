@@ -1,0 +1,7 @@
+{
+    "port": 2727,
+    "sslPort": 2828,
+    "db": {
+        "url": "mongodb://admin:123456@localhost:27017/user"
+    }
+}
