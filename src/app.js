@@ -4,6 +4,7 @@ const https = require('https');
 const cors = require('koa2-cors');
 const fs = require('fs');
 const koaBody = require('koa-body');
+const handler = require('./middleware/handler.js')
 const conn = require('./db_mongo/connections');
 const test = require('./test.js')
 
@@ -24,6 +25,7 @@ class App {
             // if(ctx) ctx.body = { success: true, result: {message:err?err.message:'internal error'} }
         });
         this.app.use(koaBody({ strict: false }));
+        this.app.use(handler)
         // logger
         this.app.use(async (ctx, next) => {
             console.log('state====>', ctx.state)
@@ -51,7 +53,7 @@ class App {
         });
         await conn.connect();
         this.app.use(cors())
-            // .use(router())
+        // .use(router())
 
 
     }
