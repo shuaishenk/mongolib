@@ -1,2 +1,2 @@
 # mongolib
-mongodb+koa2+react
+mongodb+koa2
