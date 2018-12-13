@@ -35,38 +35,6 @@ class Connection {
             }
             console.log('数据库连接成功')
         });
-        // const db = mongoose.connection//mongoose.connection;
-        // db.on('error', console.error.bind(console, 'connection error:'));
-        // db.once('open', function () {
-        //     console.log('connect mongodb success')
-        //     // we're connected!
-        //     const kittySchema = new mongoose.Schema({
-        //         name: String
-        //     });
-        //     kittySchema.methods.speak = function () {
-        //         var greeting = this.name
-        //             ? "Meow name is " + this.name
-        //             : "I don't have a name";
-        //         console.log(greeting);
-        //     }
-
-        //     const Kitten = mongoose.model('Kitten', kittySchema);
-        //     const silence = new Kitten({ name: 'Silence' });
-        //     console.log(silence.name);
-        //     silence.save(function (err, silences) {
-        //         if (err) return console.error(err);
-        //         console.log(silences)
-        //         silence.speak();
-        //     });
-        //     Kitten.find(function (err, kittens) {
-        //         if (err) return console.error(err);
-        //         console.log(kittens);
-        //     })
-        //     Kitten.find({ name: /^fluff/ }, function (err, kittens) {
-        //         if (err) return console.error(err);
-        //         console.log(kittens);
-        //     });
-        // });
     }
 
 
